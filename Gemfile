@@ -10,13 +10,15 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'haml-rails'
-gem 'database_cleaner'
+gem 'devise'
 
 group :development, :test do
+  gem 'database_cleaner'
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
   gem 'rspec-rails'
   gem 'capybara'
   gem 'pry'
+  gem 'launchy'
 end
