@@ -1,0 +1,10 @@
+%h1 Items Available To Claim
+
+%ul
+  - @items.each do |item|
+    %li= item.name
+    %li= item.description
+    - if current_user
+      %li= link_to "Claim item", "#"
+    - else
+      %li= link_to "Sign in to claim", new_user_session_path
