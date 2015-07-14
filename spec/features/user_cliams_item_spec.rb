@@ -3,7 +3,7 @@ require 'rails_helper'
 feature "when logged in and browsing items" do
   scenario "user claims item" do
     user = create(:user)
-    5.times { create(:item) }
+    create(:item)
 
     sign_in(user.email, user.password)
     visit '/'
