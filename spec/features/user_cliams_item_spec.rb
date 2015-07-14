@@ -7,7 +7,7 @@ feature "when logged in and browsing items" do
 
     sign_in(user.email, user.password)
     visit '/'
-    click_link 'Claim item'
+    click_button 'Claim item'
 
     expect(page).to have_content("Congrats, that item is yours!")
   end

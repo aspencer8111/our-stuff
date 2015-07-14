@@ -4,11 +4,16 @@ class ItemsController < ApplicationController
   end
 
   def update
-    @item = Item.find(params[:item][:id])
+    @item = Item.find(params[:id])
+
+    if params[:item][:user_id]
+      params[:item][:user_id] = current_user.id
+    end
+
     @item.update_attributes(item_params)
 
     if @item.save
-      redirect_to :index, notice: 'Congrats, that item is yours!'
+      redirect_to root_path, notice: 'Congrats, that item is yours!'
     end
   end
 
