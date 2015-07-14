@@ -5,6 +5,6 @@
     %li= item.name
     %li= item.description
     - if current_user
-      %li= link_to "Claim item", "#"
+      %li= link_to "Claim item", item_path(item:{id: item.id, user_id: current_user.id}), method: :put
     - else
       %li= link_to "Sign in to claim", new_user_session_path
