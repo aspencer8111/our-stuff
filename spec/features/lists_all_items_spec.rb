@@ -14,7 +14,7 @@ feature "it lists all of the items" do
     sign_in(user.email, user.password)
     visit '/'
 
-    expect(page).to have_content("Claim item")
+    expect(page).to have_selector(:link_or_button, "Claim item")
   end
 
   def create_items
