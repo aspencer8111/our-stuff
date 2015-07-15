@@ -23,4 +23,5 @@ group :development, :test do
   gem 'pry'
   gem 'launchy'
   gem 'factory_girl_rails'
+  gem 'shoulda-matchers'
 end
