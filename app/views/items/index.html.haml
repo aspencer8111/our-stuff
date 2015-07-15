@@ -3,11 +3,12 @@
   - @items.each do |item|
     .col-sm-4.col-lg-4.col-md-4
       .thumbnail
-        - unless item.picture_updated_at.nil?
-          = image_tag item.picture.url(:square)
         .caption
+          = render 'action_button', item: item
+          %br
           %h4= item.name
           %p= item.description
           - unless current_user
             %p= link_to "Sign in to claim", new_user_session_path
-          = render 'action_button', item: item
+        - unless item.picture_updated_at.nil?
+          = image_tag item.picture.url(:square)
