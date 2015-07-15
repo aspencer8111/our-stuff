@@ -2,10 +2,10 @@ class Item < ActiveRecord::Base
   belongs_to :user
 
   has_attached_file :picture, styles: {
-    thumb: '100x100>',
-    square: '200x200#',
-    medium: '300x300>',
-    large: '900x900'
+    thumb: '100x100#',
+    square: '125x125#',
+    medium: '300x300#',
+    large: '900x900#'
   }
 
   validates_presence_of :name, :description
