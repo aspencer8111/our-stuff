@@ -9,6 +9,6 @@ feature "when logged in and browsing items" do
     visit '/'
     click_button 'Claim item'
 
-    expect(page).to have_content("Congrats, that item is yours!")
+    expect(page).to have_content("Item has been updated")
   end
 end

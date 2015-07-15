@@ -7,7 +7,7 @@ feature "user adds an item" do
     visit new_item_path
     fill_in "Name", with: "Thing"
     fill_in "Description", with: "I'm a thing yo!"
-    click_button "Create item"
+    click_button "Submit"
 
     expect(page).to have_content("Item has been added.")
   end
