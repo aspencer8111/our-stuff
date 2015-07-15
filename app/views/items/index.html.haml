@@ -2,6 +2,7 @@
 
 %ul
   - @items.each do |item|
+    %li= image_tag item.picture.url(:square) if item.picture
     %li= item.name
     %li= item.description
     - if current_user
@@ -10,3 +11,4 @@
         = f.submit "Claim item"
     - else
       %li= link_to "Sign in to claim", new_user_session_path
+    %hr

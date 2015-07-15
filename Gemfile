@@ -11,6 +11,13 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'haml-rails'
 gem 'devise'
+gem 'paperclip'
+gem 'aws-sdk-v1'
+gem "figaro"
+
+group :production do
+  gem 'rails_12factor'
+end
 
 group :development, :test do
   gem 'database_cleaner'
