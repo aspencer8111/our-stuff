@@ -6,9 +6,9 @@
         .caption
           = render 'action_button', item: item
           %br
-          %h4= item.name
+          %h4= link_to item.name, item_path(item)
           %p= item.description
           - unless current_user
             %p= link_to "Sign in to claim", new_user_session_path
         - unless item.picture_updated_at.nil?
-          = image_tag item.picture.url(:square)
+          = image_tag item.picture.url(:square), class: "img-responsive"

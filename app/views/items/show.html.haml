@@ -1,0 +1,5 @@
+%h1= @item.name
+%p= @item.description
+%hr
+- unless @item.picture_updated_at.nil?
+  = image_tag @item.picture.url(:large), class: "img-responsive"

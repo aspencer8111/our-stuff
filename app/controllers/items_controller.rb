@@ -1,9 +1,12 @@
 class ItemsController < ApplicationController
-  before_filter :find_item, only: [:edit, :update]
+  before_filter :find_item, only: [:edit, :update, :show]
   before_filter :check_admin, only: [:new, :edit]
 
   def index
     @items = Item.unclaimed
+  end
+
+  def show
   end
 
   def new
