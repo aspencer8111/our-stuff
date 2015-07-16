@@ -1,3 +1,5 @@
+- unless current_user
+  %p= link_to "Sign in to claim", new_user_session_path
 - if current_user
   - if current_user.admin
     = link_to "Edit Item", edit_item_path(item), class: 'btn btn-default btn-sm pull-right'
